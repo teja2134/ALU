@@ -40,16 +40,16 @@
 ----------------------------------------------------------------------
 
 # VERILOG CODE:
-
+~~~
 module alu(
 
-           input [7:0] A,B,  // ALU 8-bit Inputs                 
+           input [7:0] A,B,                
            
-           input [3:0] ALU_Sel,// ALU Selection
+           input [3:0] ALU_Sel,
            
-           output [7:0] ALU_Out, // ALU 8-bit Output
+           output [7:0] ALU_Out, 
            
-           output CarryOut // Carry Out Flag
+           output CarryOut 
     
     );
     
@@ -57,11 +57,11 @@ module alu(
     
     wire [8:0] tmp;
     
-    assign ALU_Out = ALU_Result; // ALU out
+    assign ALU_Out = ALU_Result; 
     
     assign tmp = {1'b0,A} + {1'b0,B};
     
-    assign CarryOut = tmp[8]; // Carryout flag
+    assign CarryOut = tmp[8];
     
     always @(*)
     
@@ -140,7 +140,7 @@ module alu(
     end
 
 endmodule
-
+~~~
 # OUTPUT:
 
 ![ALU](https://github.com/teja2134/ALU/assets/161149578/204f36dc-fffd-4826-b00c-c2b2e3b3b735)
